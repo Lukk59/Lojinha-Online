@@ -20,6 +20,7 @@ O fluxo principal contempla:
 
 ## Uso do Singleton
   O sistema foi modelado com uma arquitetura do modelo cliente-servidor monolítico, na qual toda a lógica de negócio, gerenciamento de pedidos e processamento de pagamentos ficam concentrados no servidor. O cliente apenas consome os serviços disponibilizados pela aplicação.
+  
   A classe `PagamentoGatewaySingleton` implementa o padrão Singleton.Ela foi usada para representar a conexão com o sistema externo de pagamento, garantindo que exista apenas uma instância desse componente durante toda a execução do sistema.
 
 Essa decisão foi tomada porque:
