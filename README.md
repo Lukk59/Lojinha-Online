@@ -8,7 +8,7 @@ O projeto foi organizado em pacotes para separar responsabilidades:
 - `app`: classe principal para execução da simulação.
 
 ## Principais decisões arquiteturais
-A aplicação segue uma arquitetura cliente-servidor monolítica em forma de simulação local, concentrando toda a lógica de negócio em uma única aplicação Java.
+  A aplicação segue uma arquitetura cliente-servidor monolítica em forma de simulação local, concentrando toda a lógica de negócio em uma única aplicação Java.
 Os clientes e produtos foram cadastrados estaticamente para simplificar a execução.
 O fluxo principal contempla:
 1. identificação do cliente;
@@ -19,8 +19,8 @@ O fluxo principal contempla:
 6. confirmação ou falha da compra.
 
 ## Uso do Singleton
-A classe `PagamentoGatewaySingleton` implementa o padrão Singleton.
-Ela foi usada para representar a conexão com o sistema externo de pagamento, garantindo que exista apenas uma instância desse componente durante toda a execução do sistema.
+  O sistema foi modelado com uma arquitetura do modelo cliente-servidor monolítico, na qual toda a lógica de negócio, gerenciamento de pedidos e processamento de pagamentos ficam concentrados no servidor. O cliente apenas consome os serviços disponibilizados pela aplicação.
+  A classe `PagamentoGatewaySingleton` implementa o padrão Singleton.Ela foi usada para representar a conexão com o sistema externo de pagamento, garantindo que exista apenas uma instância desse componente durante toda a execução do sistema.
 
 Essa decisão foi tomada porque:
 - centraliza o acesso ao gateway externo;
